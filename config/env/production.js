@@ -11,9 +11,9 @@ module.exports = {
   },
   port: process.env.PORT || 8443,
   // Binding to 127.0.0.1 is safer in production.
-  host: process.env.HOST || '0.0.0.0',
+  host: process.env.HOST || '127.0.0.1',
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/mean',
+    uri: process.env.MONGOHQ_URL || 'mongodb://p4cm4n972:made81MA@ds111461.mlab.com:11461/proze' || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/mean',
     options: {
       user: '',
       pass: ''
@@ -49,19 +49,19 @@ module.exports = {
     }
   },
   facebook: {
-    clientID: process.env.FACEBOOK_ID || 'APP_ID',
-    clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
+    clientID: process.env.FACEBOOK_ID || '288860251564912',
+    clientSecret: process.env.FACEBOOK_SECRET || '6efb5cd8ce74993b286eac5bdc2f4c33',
     callbackURL: '/api/auth/facebook/callback'
   },
   twitter: {
     username: '@TWITTER_USERNAME',
-    clientID: process.env.TWITTER_KEY || 'CONSUMER_KEY',
-    clientSecret: process.env.TWITTER_SECRET || 'CONSUMER_SECRET',
+    clientID: process.env.TWITTER_KEY || 'bETJ89puTYN418qTGFvyXseJN',
+    clientSecret: process.env.TWITTER_SECRET || 'mHe1cHOEnyDb2zwvMWW6scj7qlcdoAurWOUvdqgvk2nS01xZYS',
     callbackURL: '/api/auth/twitter/callback'
   },
   google: {
-    clientID: process.env.GOOGLE_ID || 'APP_ID',
-    clientSecret: process.env.GOOGLE_SECRET || 'APP_SECRET',
+    clientID: process.env.GOOGLE_ID || '894644192995-qt7o1043n34e5anpipu8vsq04u8stg7a.apps.googleusercontent.com',
+    clientSecret: process.env.GOOGLE_SECRET || 'HTUTeH4w5dL0-j5IXgV1mt7X',
     callbackURL: '/api/auth/google/callback'
   },
   linkedin: {

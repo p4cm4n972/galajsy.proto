@@ -88,8 +88,8 @@ exports.sendMail = function (req, res) {
   };
 
   transporter.sendMail(mailOptions, function (err, info) {
-    if(err) {
-      return console.log(error);
+    if (err) {
+      return console.log(err);
     }
     console.log('Message %s sent: %s', info.messageId, info.response);
     res.redirect('/');

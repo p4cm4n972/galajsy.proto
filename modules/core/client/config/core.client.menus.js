@@ -19,7 +19,7 @@
       title: 'contact',
       state: 'contact',
       type: 'item',
-      class: '',  
+      class: '',
       roles: ['*']
     });
     menuService.addMenu('account', {
