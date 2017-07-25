@@ -8,6 +8,20 @@
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(menuService) {
+    menuService.addMenuItem('topbar', {
+      title: 'about',
+      state: 'about',
+      type: 'item',
+      class: '',
+      roles: ['*']
+    });
+    menuService.addMenuItem('topbar', {
+      title: 'contact',
+      state: 'contact',
+      type: 'item',
+      class: '',  
+      roles: ['*']
+    });
     menuService.addMenu('account', {
       roles: ['user']
     });

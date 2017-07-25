@@ -4,7 +4,7 @@ var defaultEnvConfig = require('./default');
 
 module.exports = {
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/mean-dev',
+    uri: process.env.MONGOHQ_URL || 'mongodb://p4cm4n972:made81MA@ds111461.mlab.com:11461/proze' || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/mean-dev',
     options: {
       user: '',
       pass: ''
@@ -28,19 +28,19 @@ module.exports = {
     title: defaultEnvConfig.app.title + ' - Development Environment'
   },
   facebook: {
-    clientID: process.env.FACEBOOK_ID || 'APP_ID',
-    clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
+    clientID: process.env.FACEBOOK_ID || '288860251564912',
+    clientSecret: process.env.FACEBOOK_SECRET || '6efb5cd8ce74993b286eac5bdc2f4c33',
     callbackURL: '/api/auth/facebook/callback'
   },
   twitter: {
     username: '@TWITTER_USERNAME',
-    clientID: process.env.TWITTER_KEY || 'CONSUMER_KEY',
-    clientSecret: process.env.TWITTER_SECRET || 'CONSUMER_SECRET',
+    clientID: process.env.TWITTER_KEY || 'bETJ89puTYN418qTGFvyXseJN',
+    clientSecret: process.env.TWITTER_SECRET || 'mHe1cHOEnyDb2zwvMWW6scj7qlcdoAurWOUvdqgvk2nS01xZYS',
     callbackURL: '/api/auth/twitter/callback'
   },
   google: {
-    clientID: process.env.GOOGLE_ID || 'APP_ID',
-    clientSecret: process.env.GOOGLE_SECRET || 'APP_SECRET',
+    clientID: process.env.GOOGLE_ID || '894644192995-qt7o1043n34e5anpipu8vsq04u8stg7a.apps.googleusercontent.com',
+    clientSecret: process.env.GOOGLE_SECRET || 'HTUTeH4w5dL0-j5IXgV1mt7X',
     callbackURL: '/api/auth/google/callback'
   },
   linkedin: {
@@ -60,12 +60,12 @@ module.exports = {
     sandbox: true
   },
   mailer: {
-    from: process.env.MAILER_FROM || 'MAILER_FROM',
+    from: process.env.MAILER_FROM || 'manuel.adele@gmail.com',
     options: {
-      service: process.env.MAILER_SERVICE_PROVIDER || 'MAILER_SERVICE_PROVIDER',
+      service: process.env.MAILER_SERVICE_PROVIDER || 'Gmail',
       auth: {
-        user: process.env.MAILER_EMAIL_ID || 'MAILER_EMAIL_ID',
-        pass: process.env.MAILER_PASSWORD || 'MAILER_PASSWORD'
+        user: process.env.MAILER_EMAIL_ID || 'manuel.adele@gmail.com',
+        pass: process.env.MAILER_PASSWORD || 'Jean_3:16'
       }
     }
   },

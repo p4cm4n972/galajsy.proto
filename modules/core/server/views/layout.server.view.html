@@ -33,15 +33,19 @@
 
   <!-- Application CSS Files -->
   {{#each cssFiles}}<link rel="stylesheet" href="/{{this}}">{{/each}}
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body class="ng-cloak">
   <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
   <section class="content">
-    <section class="container">
+    <section class="container-fluid">
       {{{block "content"}}}
     </section>
   </section>
+  <footer ng-include="'/modules/core/client/views/footer.client.view.html'" class="footer"></footer>
 
   <noscript>
     <style>

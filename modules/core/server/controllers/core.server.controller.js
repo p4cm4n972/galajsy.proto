@@ -1,5 +1,8 @@
 'use strict';
 
+var nodemailer = require('nodemailer');
+
+
 var validator = require('validator'),
   path = require('path'),
   config = require(path.resolve('./config/config'));
@@ -59,5 +62,36 @@ exports.renderNotFound = function (req, res) {
     'default': function () {
       res.send('Path not found');
     }
+  });
+};
+/**
+ * Send Contact email
+ */
+exports.sendMail = function (req, res) {
+  var data = req.body;
+
+  let transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: 'manuel.adele@gmail.com',
+      pass: 'Jean_3:16'
+    }
+  });
+
+  let mailOptions = {
+    from: data.email,
+    to: 'manuel.adele@gmail.com',
+    subject: 'Contact Form | galaJSy 🤖 ',
+    text: data.message
+  };
+
+  transporter.sendMail(mailOptions, function (err, info) {
+    if(err) {
+      return console.log(error);
+    }
+    console.log('Message %s sent: %s', info.messageId, info.response);
+    res.redirect('/');
   });
 };
