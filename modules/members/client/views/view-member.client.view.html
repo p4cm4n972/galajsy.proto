@@ -1,6 +1,6 @@
 <section>
   <div class="page-header">
-    <h1 ng-bind="vm.member.name"></h1>
+    <h1 ng-bind="vm.member.displayName"></h1>
   </div>
   <div class="pull-right"
        ng-show="vm.member.isCurrentUserOwner">
@@ -17,9 +17,19 @@
       Posted on
       <span ng-bind="vm.member.created | date:'mediumDate'"></span>
       by
-      <span ng-if="vm.member.user"
-            ng-bind="vm.member.user.displayName"></span>
-      <span ng-if="!vm.member.user">Deleted User</span>
+      <span ng-if="vm.member.username"
+            ng-bind="vm.member.displayName">
+          </span>
+            <h2>pseudo : {{vm.member.username}}</h2>   
+            <h2>first name : {{vm.member.providerData.first_name}}</h2>
+            <h2>last name : {{vm.member.providerData.last_name}}</h2>
+            <h2>email : {{vm.member.providerData.email}}</h2>
+            <h2>location : {{vm.member.providerData.location}}</h2>
+            <img class="image" ng-src="/{{vm.member.profileImageURL}}" style="width:300px; height:auto">
+          
+          
+          
+      <span ng-if="!vm.member.username">Deleted User</span>
     </em>
   </small>
   <p class="lead" ng-bind="vm.member.content"></p>

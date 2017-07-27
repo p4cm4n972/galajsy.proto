@@ -33,6 +33,7 @@ exports.create = function (req, res) {
  */
 exports.read = function (req, res) {
   // convert mongoose document to JSON
+  console.log('READ');
   var member = req.member ? req.member.toJSON() : {};
 
   // Add a custom field to the Article, for determining if the current User is the "owner".
@@ -90,7 +91,7 @@ exports.list = function (req, res) {
     } else {
       fs.writeFile('JSONmembers.txt', JSON.stringify(members), function (err) {
         if (err) console.error(err);
-        console.log('Its done');
+        console.log('List MEMBERS done');
       });
       res.jsonp(members);
     }

@@ -18,7 +18,7 @@ exports.invokeRolesPolicies = function () {
       resources: '/api/members',
       permissions: '*'
     }, {
-      resources: '/api/members',
+      resources: '/api/members/:memberId',
       permissions: '*'
     }]
   }, {
@@ -27,7 +27,7 @@ exports.invokeRolesPolicies = function () {
       resources: '/api/members',
       permissions: ['get', 'post']
     }, {
-      resources: '/api/members',
+      resources: '/api/members/:memberId',
       permissions: ['get']
     }]
   }, {

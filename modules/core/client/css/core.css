@@ -1,62 +1,78 @@
 .content {
-  margin-top: 50px;
+	margin-top: 50px;
 }
+
 .undecorated-link:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
+
 [ng\:cloak],
 [ng-cloak],
 [x-ng-cloak],
 .ng-cloak,
 .x-ng-cloak {
-  display: none !important;
+	display: none !important;
 }
+
 .header-profile-image {
-  border-radius: 50%;
-  height: 28px;
-  margin-right: 5px;
-  opacity: 0.8;
-  width: 28px;
+	border-radius: 50%;
+	height: 28px;
+	margin-right: 5px;
+	opacity: 0.8;
+	width: 28px;
 }
+
 .open .header-profile-image,
 a:hover .header-profile-image {
-  opacity: 1;
+	opacity: 1;
 }
+
 .user-header-dropdown-toggle {
-  padding-bottom: 11px !important;
-  padding-top: 11px !important;
+	padding-bottom: 11px !important;
+	padding-top: 11px !important;
 }
+
 .user-primary-account {
-  font-size: 30px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
+	font-size: 30px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
 }
+
 .error-text {
-  display: none;
+	display: none;
 }
+
 .has-error .help-block.error-text {
-  display: block;
+	display: block;
 }
+
 .has-error .help-inline.error-text {
-  display: inline;
+	display: inline;
 }
+
+
 /*******************************************************************************/
+
+
 /*
 GLOBAL SETTING
 */
+
 @font-face {
-    font-family:'pacFont';
-    src: url('font/PAC-FONT.TTF') format('truetype');
+	font-family: 'pacFont';
+	src: url('font/PAC-FONT.TTF') format('truetype');
 }
-  /*Jakob Fischer
+
+@font-face {
+	/*Jakob Fischer
 www.pizzadude.dk
 May '03
 */
-  @font-face {
-    font-family:'arcadeFont';
-    src: url('font/ARCADE.TTF') format('truetype');
+	font-family: 'arcadeFont';
+	src: url('font/ARCADE.TTF') format('truetype');
 }
+
 a,
 body,
 html,
@@ -67,54 +83,62 @@ h4,
 h5,
 li,
 p {
-  color: #008000;
-  font-family: arcadeFont , "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
-  font-size: 1.2rem;
-}
-h1 {
-  font-family: pacFont;
+	color: #008000;
+	font-family: arcadeFont, "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 1.2rem;
 }
 
-body, html {
-  background-color: #000000;
+h1 {
+	font-family: pacFont;
+}
+
+body,
+html {
+	background-color: #000000;
 }
 
 button {
-  border-radius: 5px;
+	border-radius: 5px;
 }
 
 ul li a span {
-  margin: 5px;
+	margin: 5px;
 }
 
 form label {
-  text-align: right;
+	text-align: right;
 }
-.footer{
-  background-color: #000000;
-  bottom: 0;
-  height: 60px;
-  position: fixed;
-  text-align: center;
-  width: 100%;
+
+.footer {
+	background-color: #000000;
+	bottom: 0;
+	height: 60px;
+	position: fixed;
+	text-align: center;
+	width: 100%;
 }
+
 footer img {
-    margin: 10px;
+	margin: 10px;
 }
+
+
 /*
 title welcom
 */
-.welcom { 
-  text-shadow: 0 5px 20px green;
+
+.welcom {
+	text-shadow: 0 5px 20px green;
 }
+
 
 /*
 GLYPHICON SETTING
 */
 
 .glyphicon {
-  font-size: 1em;
-  text-shadow: 2px 2px black;
+	font-size: 1em;
+	text-shadow: 2px 2px black;
 }
 
 
@@ -123,28 +147,27 @@ MAIN MENU
 */
 
 .navbar {
-  background: linear-gradient(45deg, blue, red);
-  height: 60px;
-  position: fixed;
-  text-align: center;
-  top: 0;
-  width: 100%;
+	background: linear-gradient(45deg, blue, red);
+	height: 60px;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
 }
 
 .navbar-toggle {
-  border-color: #008000;
+	border-color: #008000;
 }
 
 .navbar-toggle .icon-bar {
-  background-color: #008000;
+	background-color: #008000;
 }
 
 .navbar-light .navbar-nav>li>a:hover,
 .navbar-light .navbar-nav>li>a:focus,
 .nav.navbar-nav.navbar-right>li>a:focus {
-  background: #008000;
-  color: black;
-  
+	background: #008000;
+	color: black;
 }
 
 
@@ -153,27 +176,28 @@ SECOND MENU
 */
 
 .menu_section ul li {
-  margin-bottom: 10px;
-  text-shadow: 0 5px 7px green;
-  top: 10px;
+	margin-bottom: 10px;
+	text-shadow: 0 5px 7px green;
+	top: 10px;
 }
+
 .menu_section {
-  background:transparent;
-  height: 60px;
-  position: fixed;
-  text-align: center;
-  top: 0;
-  width: 100%;
+	background: transparent;
+	height: 60px;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
 }
+
 
 /*
 BUTTON LINK CONNECTION MAIN PAGE
 */
 
 .direct {
-  position: relative;
-  z-index: 5;
-  
+	position: relative;
+	z-index: 5;
 }
 
 
@@ -182,25 +206,23 @@ VIEWS SETTING
 */
 
 
-
-
 /*
 CAROUSEL
 */
 
 .hide-bullets {
-  list-style: none;
-  margin-left: -40px;
-  margin-top: 20px;
+	list-style: none;
+	margin-left: -40px;
+	margin-top: 20px;
 }
 
 .thumbnail {
-  padding: 0;
+	padding: 0;
 }
 
 .carousel-inner>.item>img,
 .carousel-inner>.item>a>img {
-  width: 100%;
+	width: 100%;
 }
 
 
@@ -208,59 +230,65 @@ CAROUSEL
 ANIMATION FALLINGS STARS
 */
 
-
 #layout {
-  color: #FFF;
-  height: 100%;
-  width: 100%;
+	color: #FFF;
+	height: 100%;
+	width: 100%;
 }
+
+
 /**
      author: @manufosela
      */
+
 .stars {
-  background-image: url(http://www.14denoviembre.es/img/hori.png ), url(http://www.14denoviembre.es/img/stars_5.png );
-  background-repeat: repeat-x, repeat-x repeat-y;
-  position: absolute;
-  transform: translate3D(0em, 0em, 0);
-  transform-style: preserve-3d;
-  z-index: 0;
+	background-image: url(http://www.14denoviembre.es/img/hori.png ), url(http://www.14denoviembre.es/img/stars_5.png );
+	background-repeat: repeat-x, repeat-x repeat-y;
+	position: absolute;
+	transform: translate3D(0em, 0em, 0);
+	transform-style: preserve-3d;
+	z-index: 0;
 }
 
 
 /*
 ANImation clouds
 */
+
+
 /* ============================================================================================== 
 Nick Mkrtchyan
 https://www.facebook.com/sonick.pk
 http://www.Mkrtchyan.zz.mu
 ================================================================================================= */
+
 @keyframes move-clouds-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 10000px 0;
-  }
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 10000px 0;
+	}
 }
 
 @-webkit-keyframes move-clouds-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 10000px 0;
-  }
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 10000px 0;
+	}
 }
 
 @-moz-keyframes move-clouds-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 10000px 0;
-  }
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 10000px 0;
+	}
 }
+
 
 /*@-ms-keyframes move-clouds-back {
   from {
@@ -272,22 +300,56 @@ http://www.Mkrtchyan.zz.mu
 }*/
 
 .clouds {
-  bottom: 0;
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
+	bottom: 0;
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
 }
 
 .clouds {
-  animation: move-clouds-back 200s linear infinite;
-  background: transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat-x top center;
-  z-index: 3;
-  -moz-animation: move-clouds-back 200s linear infinite;
-  -ms-animation: move-clouds-back 200s linear infinite;
-  -o-animation: move-clouds-back 200s linear infinite;
-  -webkit-animation: move-clouds-back 200s linear infinite;
+	animation: move-clouds-back 200s linear infinite;
+	background: transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat-x top center;
+	z-index: 3;
+	-moz-animation: move-clouds-back 200s linear infinite;
+	-ms-animation: move-clouds-back 200s linear infinite;
+	-o-animation: move-clouds-back 200s linear infinite;
+	-webkit-animation: move-clouds-back 200s linear infinite;
+}
+/*
+MEMBERS EFFECTS
+*/
+.image {
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.contain:hover .image {
+  opacity: 0.3;
+}
+
+.contain:hover .middle {
+  opacity: 1;
+}
+
+.text {
+background-color: transparent;
+color: green;
+font-size: 16px;
+text-shadow: .5px 0.5px 10px black;
+text-align: center;
 }

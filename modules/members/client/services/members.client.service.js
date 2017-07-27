@@ -9,7 +9,7 @@
   MembersService.$inject = ['$resource'];
 
   function MembersService($resource) {
-    return $resource('api/members', {
+    return $resource('api/members/:memberId', {
       memberId: '@_id'
     }, {
       update: {

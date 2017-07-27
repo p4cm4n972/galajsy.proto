@@ -10,6 +10,6 @@
   function MembersListController(MembersService) {
     var vm = this;
 
-    vm.members = MembersService.query();
+    vm.members = MembersService.query(); 
   }
 }());
