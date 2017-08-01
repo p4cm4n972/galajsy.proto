@@ -9,25 +9,6 @@ var path = require('path'),
   Member = mongoose.model('User'),
   errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller')),
   _ = require('lodash');
-
-/**
- * Create a Member
- */
-exports.create = function (req, res) {
-  var member = new Member(req.body);
-  member.user = req.user;
-
-  member.save(function (err) {
-    if (err) {
-      return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
-      });
-    } else {
-      res.jsonp(member);
-    }
-  });
-};
-
 /**
  * Show the current Member
  */
@@ -44,42 +25,6 @@ exports.read = function (req, res) {
 };
 
 /**
- * Update a Member
- */
-exports.update = function (req, res) {
-  var member = req.member;
-
-  member = _.extend(member, req.body);
-
-  member.save(function (err) {
-    if (err) {
-      return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
-      });
-    } else {
-      res.jsonp(member);
-    }
-  });
-};
-
-/**
- * Delete an Member
- */
-exports.delete = function (req, res) {
-  var member = req.member;
-
-  member.remove(function (err) {
-    if (err) {
-      return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
-      });
-    } else {
-      res.jsonp(member);
-    }
-  });
-};
-
-/**
  * List of Members
  */
 exports.list = function (req, res) {
@@ -93,8 +38,8 @@ exports.list = function (req, res) {
         if (err) console.error(err);
         console.log('List MEMBERS done');
       });
-      res.jsonp(members);
     }
+    res.jsonp(members);
   });
 };
 
