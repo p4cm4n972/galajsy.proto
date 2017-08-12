@@ -14,7 +14,7 @@ module.exports = {
   host: process.env.HOST || 'https://galajsy.herokuapp.com/',
   // DOMAIN config should be set to the fully qualified application accessible ec2-35-163-71-140.us-west-2.compute.amazonaws.com
   // URL. For example: https://www.myapp.com (including port if required).
-  domain: process.env.DOMAIN,
+  domain: 'https://galajsy.herokuapp.com:3000',
   // Session Cookie settings
   sessionCookie: {
     // session expiration is set by default to 24 hours
