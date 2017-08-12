@@ -11,8 +11,8 @@ module.exports = {
     promise: global.Promise
   },
   port: process.env.PORT || 3000,
-  host: process.env.HOST || 'ec2-35-163-71-140.us-west-2.compute.amazonaws.com',
-  // DOMAIN config should be set to the fully qualified application accessible
+  host: process.env.HOST || 'https://galajsy.herokuapp.com/',
+  // DOMAIN config should be set to the fully qualified application accessible ec2-35-163-71-140.us-west-2.compute.amazonaws.com
   // URL. For example: https://www.myapp.com (including port if required).
   domain: process.env.DOMAIN,
   // Session Cookie settings
