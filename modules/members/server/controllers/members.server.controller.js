@@ -34,12 +34,8 @@ exports.list = function (req, res) {
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      fs.writeFile('JSONmembers.txt', JSON.stringify(members), function (err) {
-        if (err) console.error(err);
-        console.log('List MEMBERS done');
-      });
+      res.jsonp(members);
     }
-    res.jsonp(members);
   });
 };
 

@@ -23,19 +23,6 @@
           pageTitle: 'Members List'
         }
       })
-      .state('members.create', {
-        url: '/create',
-        templateUrl: 'modules/members/client/views/form-member.client.view.html',
-        controller: 'MembersController',
-        controllerAs: 'vm',
-        resolve: {
-          memberResolve: newMember
-        },
-        data: {
-          roles: ['user', 'admin'],
-          pageTitle: 'Members Create'
-        }
-      })
       .state('members.edit', {
         url: '/:memberId/edit',
         templateUrl: 'modules/members/client/views/form-member.client.view.html',
@@ -69,11 +56,5 @@
     return MembersService.get({
       memberId: $stateParams.memberId
     }).$promise;
-  }
-
-  newMember.$inject = ['MembersService'];
-
-  function newMember(MembersService) {
-    return new MembersService();
   }
 }());

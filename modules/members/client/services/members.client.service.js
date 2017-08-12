@@ -6,15 +6,17 @@
     .module('members')
     .factory('MembersService', MembersService);
 
-  MembersService.$inject = ['$resource'];
+  MembersService.$inject = ['$resource', '$log'];
 
-  function MembersService($resource) {
-    return $resource('api/members/:memberId', {
+  function MembersService($resource, $log) {
+    var Member = $resource('api/members/:memberId', {
       memberId: '@_id'
     }, {
       update: {
         method: 'PUT'
       }
     });
+
+    return Member;
   }
 }());
