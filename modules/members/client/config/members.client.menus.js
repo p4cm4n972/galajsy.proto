@@ -13,7 +13,7 @@
       title: 'Members',
       state: 'members.list',
       type: 'item',
-      roles: ['*']
+      roles: ['user']
     });
   }
 }());
