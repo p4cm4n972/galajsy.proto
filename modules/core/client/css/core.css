@@ -108,7 +108,9 @@ ul li a span {
 form label {
 	text-align: right;
 }
-
+.line {
+	margin-bottom: 150px;
+}
 .footer {
 	background-color: #000000;
 	bottom: 0;
