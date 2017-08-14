@@ -70,6 +70,15 @@ var UserSchema = new Schema({
   birth: {
     type: String
   },
+  address: {
+    type: String
+  },
+  pref: {
+    type: String
+  },
+  presentation: {
+    type: String
+  },
   displayName: {
     type: String,
     trim: true
