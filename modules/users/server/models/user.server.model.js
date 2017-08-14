@@ -63,6 +63,13 @@ var UserSchema = new Schema({
     default: '',
     validate: [validateLocalStrategyProperty, 'Please fill in your last name']
   },
+  genre: {
+    type: String,
+    default: ''
+  },
+  birth: {
+    type: String
+  },
   displayName: {
     type: String,
     trim: true

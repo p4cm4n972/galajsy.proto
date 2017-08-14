@@ -18,6 +18,22 @@
           </div>
         </div>
         <div class="form-group" show-errors>
+          <label for="genre">Genre</label>
+          <input type="radio" id="genre" name="genre"  ng-model="vm.credentials.genre" value="male" required>male
+          <input type="radio" id="genre" name="genre"  ng-model="vm.credentials.genre" value="female" required>female
+          <div ng-messages="vm.userForm.genre.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">sex is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label for="birth">Birthday</label>
+          <input type="date" id="birth" name="birth"  ng-model="vm.credentials.birth" placeholder="yyyy-MM-dd" min="1930-01-01" max="2017-12-31" required>
+          
+          <div ng-messages="vm.userForm.genre.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">sex is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
           <label for="email">Email</label>
           <input type="email" id="email" name="email" class="form-control" ng-model="vm.credentials.email" placeholder="Email" lowercase required>
           <div ng-messages="vm.userForm.email.$error" role="alert">
