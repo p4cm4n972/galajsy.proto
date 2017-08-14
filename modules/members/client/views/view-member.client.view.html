@@ -25,6 +25,7 @@
             <h2>last name : {{vm.member.providerData.last_name || vm.member.lastName}}</h2>
             <h2>email : {{vm.member.providerData.email || vm.member.email}}</h2>
             <h2>age : {{vm.member.birth | date:'yyyy'}}</h2>
+            <h2 ng-bind="vm.age()"></h2>
             <img class="image" ng-src="/{{vm.member.profileImageURL}}" style="width:300px; height:auto">
           
           

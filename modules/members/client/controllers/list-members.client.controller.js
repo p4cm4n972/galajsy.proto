@@ -24,7 +24,6 @@
       vm.currentPage = 1;
       vm.figureOutItemsToDisplay();
       vm.pageChanged = pageChanged;
-      
     }
 
     function figureOutItemsToDisplay() {
