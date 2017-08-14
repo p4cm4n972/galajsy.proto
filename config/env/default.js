@@ -11,10 +11,10 @@ module.exports = {
     promise: global.Promise
   },
   port: process.env.PORT || 3000,
-  host: process.env.HOST || 'localhost',
+  host: process.env.HOST || '0.0.0.0',
   // DOMAIN config should be set to the fully qualified application accessible ec2-35-163-71-140.us-west-2.compute.amazonaws.com
   // URL. For example: https://www.myapp.com (including port if required).
-  domain: process.env.DOMAIN,
+  domain: process.env.DOMAIN || 'ec2-35-163-71-140.us-west-2.compute.amazonaws.com',
   // Session Cookie settings
   sessionCookie: {
     // session expiration is set by default to 24 hours
