@@ -39,7 +39,7 @@ var validateLocalStrategyEmail = function (email) {
  * - not begin or end with "."
  */
 
-var validateUsername = function(username) {
+var validateUsername = function (username) {
   var usernameRegex = /^(?=[\w.-]+$)(?!.*[._-]{2})(?!\.)(?!.*\.$).{3,34}$/;
   return (
     this.provider !== 'local' ||
@@ -68,13 +68,17 @@ var UserSchema = new Schema({
     default: ''
   },
   birth: {
-    type: String
+    type: String,
+    default: ''
   },
   address: {
-    type: String
+    type: String,
+    default: ''
+
   },
   pref: {
-    type: String
+    type: String,
+    default: ''
   },
   presentation: {
     type: String

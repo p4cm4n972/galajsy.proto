@@ -14,17 +14,17 @@
   </div>
   <small>
     <em class="text-muted">
-      Posted on
+      Created on
       <span ng-bind="vm.member.created | date:'mediumDate'"></span>
       by
       <span ng-if="vm.member.username"
             ng-bind="vm.member.displayName">
           </span>
             <h2>pseudo : {{vm.member.username}}</h2>   
-            <h2>first name : {{vm.member.providerData.first_name}}</h2>
-            <h2>last name : {{vm.member.providerData.last_name}}</h2>
-            <h2>email : {{vm.member.providerData.email}}</h2>
-            <h2>location : {{vm.member.providerData.location}}</h2>
+            <h2>first name : {{vm.member.providerData.first_name || vm.member.firstName}}</h2>
+            <h2>last name : {{vm.member.providerData.last_name || vm.member.lastName}}</h2>
+            <h2>email : {{vm.member.providerData.email || vm.member.email}}</h2>
+            <h2>age : {{vm.member.birth | date:'yyyy'}}</h2>
             <img class="image" ng-src="/{{vm.member.profileImageURL}}" style="width:300px; height:auto">
           
           

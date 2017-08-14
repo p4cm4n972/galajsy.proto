@@ -16,12 +16,14 @@ exports.read = function (req, res) {
   // convert mongoose document to JSON
   console.log('READ');
   var member = req.member ? req.member.toJSON() : {};
+  var age = Date.parse(member.birth);
 
   // Add a custom field to the Article, for determining if the current User is the "owner".
   // NOTE: This field is NOT persisted to the database, since it doesn't exist in the Article model.
   member.isCurrentUserOwner = req.user && member.user && member.user._id.toString() === req.user._id.toString();
 
   res.jsonp(member);
+  console.log(member);
 };
 
 /**
