@@ -20,9 +20,11 @@
 
     function buildPager() {
       vm.pagedItems = [];
-      vm.itemsPerPage = 15;
+      vm.itemsPerPage = 10;
       vm.currentPage = 1;
       vm.figureOutItemsToDisplay();
+      vm.pageChanged = pageChanged;
+      
     }
 
     function figureOutItemsToDisplay() {
@@ -33,6 +35,9 @@
       var begin = ((vm.currentPage - 1) * vm.itemsPerPage);
       var end = begin + vm.itemsPerPage;
       vm.pagedItems = vm.filteredItems.slice(begin, end);
+    }
+    function pageChanged() {
+      vm.figureOutItemsToDisplay();
     }
   }
 }());
