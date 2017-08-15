@@ -20,7 +20,6 @@ var config = require('../config'),
   path = require('path'),
   _ = require('lodash'),
   lusca = require('lusca'),
-  net = require('net'),
   util = require('util');
 
 /**
