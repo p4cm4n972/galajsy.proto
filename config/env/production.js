@@ -11,7 +11,7 @@ module.exports = {
   },
   port: process.env.PORT || 8443,
   // Binding to 127.0.0.1 is safer in production.
-  host: process.env.HOST || '127.0.0.1',
+  host: 'ec2-35-163-71-140.us-west-2.compute.amazonaws.com' || '127.0.0.1',
   db: {
     uri: process.env.MONGOHQ_URL || 'mongodb://p4cm4n972:made81MA@ds111461.mlab.com:11461/proze' || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/mean',
     options: {
