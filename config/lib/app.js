@@ -7,6 +7,7 @@ var config = require('../config'),
   mongoose = require('./mongoose'),
   express = require('./express'),
   chalk = require('chalk'),
+  util = require('util'),
   seed = require('./seed');
 
 function seedDB() {
@@ -51,7 +52,11 @@ module.exports.start = function start(callback) {
 
       if (callback) callback(app, db, config);
     });
-
+    app.on('connection', function(socket) {
+      app.getConnections(function(err, count) {
+        console.log('%d open connections!', count);
+      });
+    });
   });
 
 };
