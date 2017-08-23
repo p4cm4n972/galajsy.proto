@@ -8,7 +8,7 @@ var net = require('net');
 var app = require('./config/lib/app');
 var server = app.start();
 
-var Server = net.createServer((socket) => {
+/*var Server = net.createServer((socket) => {
     socket.end('deconnexion');
 }).on('error', (err) => {
     console.log(err);
@@ -19,4 +19,4 @@ Server.on('connection', function (socket) {
     Server.getConnections(function (err, count) {
         console.log('connexion: ' + count);
     })
-});
+});*/
