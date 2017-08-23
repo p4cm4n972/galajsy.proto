@@ -25,15 +25,6 @@ exports.invokeRolesPolicies = function () {
     roles: ['user'],
     allows: [{
       resources: '/api/members',
-      permissions: ['get', 'post']
-    }, {
-      resources: '/api/members/:memberId',
-      permissions: ['get']
-    }]
-  }, {
-    roles: ['user'],
-    allows: [{
-      resources: '/api/members',
       permissions: ['get']
     }, {
       resources: '/api/members',

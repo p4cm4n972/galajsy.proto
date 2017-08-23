@@ -3,13 +3,13 @@
   'use strict';
 
   angular
-    .module('members')
+    .module('members.services')
     .factory('MembersService', MembersService);
 
   MembersService.$inject = ['$resource', '$log'];
 
   function MembersService($resource, $log) {
-    var Member = $resource('api/members/:memberId', {
+    var Member = $resource('http://localhost:3000/api/members/:memberId', {
       memberId: '@_id'
     }, {
       update: {

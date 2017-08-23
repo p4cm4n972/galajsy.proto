@@ -11,7 +11,7 @@
     // Set top bar menu items
     menuService.addMenuItem('topbar', {
       title: 'Members',
-      state: 'members.list',
+      state: 'members',
       type: 'item',
       roles: ['user']
     });

@@ -12,9 +12,8 @@
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
 
-    MembersService.query(function (data) {
-      console.log(data);
-      vm.members = data;
+    vm.members = MembersService.query(function (data) {
+      //console.log(data);
       vm.buildPager();
     });
 

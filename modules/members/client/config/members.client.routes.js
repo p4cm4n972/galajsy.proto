@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('members')
+    .module('members.routes')
     .config(routeConfig);
 
   routeConfig.$inject = ['$stateProvider'];
@@ -10,12 +10,7 @@
   function routeConfig($stateProvider) {
     $stateProvider
       .state('members', {
-        abstract: true,
         url: '/members',
-        template: '<ui-view/>'
-      })
-      .state('members.list', {
-        url: '',
         templateUrl: 'modules/members/client/views/list-members.client.view.html',
         controller: 'MembersListController',
         controllerAs: 'vm',
