@@ -13,6 +13,7 @@
       title: 'Members',
       state: 'members',
       type: 'item',
+      class: 'list-alt',      
       roles: ['user']
     });
   }

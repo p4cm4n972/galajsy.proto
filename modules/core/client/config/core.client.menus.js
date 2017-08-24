@@ -12,14 +12,14 @@
       title: 'about',
       state: 'about',
       type: 'item',
-      class: '',
+      class: 'asterisk',
       roles: ['*']
     });
     menuService.addMenuItem('topbar', {
       title: 'contact',
       state: 'contact',
       type: 'item',
-      class: '',
+      class: 'envelope',
       roles: ['*']
     });
     menuService.addMenu('account', {

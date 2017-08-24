@@ -12,6 +12,7 @@
       title: 'Articles',
       state: 'articles.list',
       type: 'item',
+      class: 'book',
       roles: ['user']
     });
   }
