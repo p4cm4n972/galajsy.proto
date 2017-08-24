@@ -12,7 +12,7 @@
       title: 'Admin',
       state: 'admin',
       type: 'dropdown',
-      class: 'star',      
+      class: 'star',
       roles: ['admin']
     });
   }

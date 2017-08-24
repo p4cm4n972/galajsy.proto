@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('members.services')
+    .module('members')
     .factory('MembersService', MembersService);
 
   MembersService.$inject = ['$resource', '$log'];
