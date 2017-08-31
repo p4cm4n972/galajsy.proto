@@ -8,11 +8,9 @@ var membersPolicy = require('../policies/members.server.policy'),
 
 module.exports = function (app) {
   // Members Routes
-  app.route('/api/members').all(membersPolicy.isAllowed)
-    .get(members.list);
+  app.route('/api/members').all(membersPolicy.isAllowed).get(members.list);
 
-  app.route('/api/members/:memberId').all(membersPolicy.isAllowed)
-    .get(members.read);
+  app.route('/api/members/:memberId').all(membersPolicy.isAllowed).get(members.favorite);
 
   // Finish by binding the Member middleware
   app.param('memberId', members.memberByID);

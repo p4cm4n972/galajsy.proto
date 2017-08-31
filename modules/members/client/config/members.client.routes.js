@@ -31,7 +31,7 @@
           pageTitle: 'Edit Member {{ memberResolve.name }}'
         }
       })
-      .state('members.view', {
+      .state('members.friend', {
         url: '/:memberId',
         templateUrl: 'modules/members/client/views/view-member.client.view.html',
         controller: 'MembersController',

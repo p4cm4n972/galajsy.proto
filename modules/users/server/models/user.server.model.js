@@ -4,6 +4,7 @@
  * Module dependencies
  */
 var mongoose = require('mongoose'),
+  friends = require("mongoose-friends"),
   path = require('path'),
   config = require(path.resolve('./config/config')),
   Schema = mongoose.Schema,
@@ -11,6 +12,7 @@ var mongoose = require('mongoose'),
   validator = require('validator'),
   generatePassword = require('generate-password'),
   owasp = require('owasp-password-strength-test');
+
 
 owasp.config(config.shared.owasp);
 
@@ -249,5 +251,6 @@ UserSchema.statics.generateRandomPassphrase = function () {
     }
   });
 };
+UserSchema.plugin(friends({pathName: "myFriends"}));
 
 mongoose.model('User', UserSchema);

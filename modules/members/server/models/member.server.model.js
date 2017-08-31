@@ -3,9 +3,9 @@
 /**
  * Module dependencies.
  */
+
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
-
 /**
  * Member Schema
  */
@@ -25,5 +25,4 @@ var MemberSchema = new Schema({
     ref: 'User'
   }
 });
-
 mongoose.model('Member', MemberSchema);

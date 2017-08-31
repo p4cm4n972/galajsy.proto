@@ -13,7 +13,7 @@
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
 
     vm.members = MembersService.query(function (data) {
-      //console.log(data);
+
       vm.buildPager();
     });
 
