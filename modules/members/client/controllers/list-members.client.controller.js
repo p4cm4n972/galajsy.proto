@@ -5,9 +5,9 @@
     .module('members')
     .controller('MembersListController', MembersListController);
 
-  MembersListController.$inject = ['$scope', '$filter', 'MembersService'];
+  MembersListController.$inject = ['$scope', '$filter', 'MembersService', '$http'];
 
-  function MembersListController($scope, $filter, MembersService) {
+  function MembersListController($scope, $filter, MembersService, $http) {
     var vm = this;
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
@@ -37,5 +37,7 @@
     function pageChanged() {
       vm.figureOutItemsToDisplay();
     }
+    
   }
+
 }());

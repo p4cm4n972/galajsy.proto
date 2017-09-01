@@ -15,5 +15,7 @@ angular
         $http.post('/contact', data).then(
           $location.url('/'));
       };
+
+      
     }
   ]);

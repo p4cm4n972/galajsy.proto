@@ -3,6 +3,7 @@
 /**
  * Module dependencies.
  */
+var nodemailer = require('nodemailer');
 var path = require('path'),
   fs = require('fs'),
   util = require('util'),
@@ -39,11 +40,33 @@ exports.favorite = function (req, res) {
     console.log('The file has been saved!');
   });
   Member.requestFriend(req.user._id, req.member._id, function(err, done) {
+    var data = req;
     if (err) {
       console.log('error add friend');
     } else {
       console.log('friend add OK');
-      res.send({message: "Invitation sended!"});
+      let transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
+        auth: {
+          user: 'manuel.adele@gmail.com',
+          pass: 'Jean_3:16'
+        }
+      });
+      let mailOptions = {
+        from: req.user.email || req.user.email,
+        to: req.member.providerData.email || req.member.email,
+        subject: 'Be my friend | galaJSy 🤖 ',
+        html: '<h1 style="border: solid green 2px; text-align:center"><i>Vous avez reçu une demande de: ' + req.member.username + '</i></h1><img src=' + req.member.profileImageURL || req.member.providerData.profileImageURL + ' width=150px>'
+      };
+      transporter.sendMail(mailOptions, function (err, info) {
+        if (err) {
+          return console.log(err);
+        }
+        console.log('Message %s sent: %s', info.messageId, info.response);
+        res.redirect('/');
+      });
     }
   });
 };

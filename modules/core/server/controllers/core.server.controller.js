@@ -69,7 +69,6 @@ exports.renderNotFound = function (req, res) {
  */
 exports.sendMail = function (req, res) {
   var data = req.body;
-console.log(data.email);
   let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
