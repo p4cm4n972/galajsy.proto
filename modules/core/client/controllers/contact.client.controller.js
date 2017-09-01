@@ -2,7 +2,7 @@
 
 angular
   .module('core')
-  .controller('ContactController', ['$scope', '$http', '$location', 
+  .controller('ContactController', ['$scope', '$http', '$location',
     function ($scope, $http, $location) {
 
       $scope.sendMail = function () {

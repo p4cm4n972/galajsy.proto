@@ -69,7 +69,7 @@ exports.renderNotFound = function (req, res) {
  */
 exports.sendMail = function (req, res) {
   var data = req.body;
-
+console.log(data.email);
   let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
@@ -84,7 +84,7 @@ exports.sendMail = function (req, res) {
     from: data.email,
     to: 'manuel.adele@gmail.com',
     subject: 'Contact Form | galaJSy 🤖 ',
-    text: data.message
+    html: '<h1 style="border: solid green 2px; text-align:center"><i>Vous avez reçu un message de: ' + data.name + ' ' + data.email + '</i></h1><p style="border: solid green 2px; text-align:center">' + data.message + '<p>'
   };
 
   transporter.sendMail(mailOptions, function (err, info) {
@@ -92,6 +92,6 @@ exports.sendMail = function (req, res) {
       return console.log(err);
     }
     console.log('Message %s sent: %s', info.messageId, info.response);
-    res.redirect('/contact');
+    res.redirect('/');
   });
 };
