@@ -55,8 +55,8 @@ exports.favorite = function (req, res) {
         }
       });
       let mailOptions = {
-        from: req.user.email || req.user.email,
-        to: req.member.providerData.email || req.member.email,
+        from: req.member.email || req.member.email,
+        to: req.user.providerData.email || req.user.email,
         subject: 'Be my friend | galaJSy 🤖 ',
         html: '<h1 style="border: solid green 2px; text-align:center"><i>Vous avez reçu une demande de: ' + req.member.username + '</i></h1><img src=' + req.member.profileImageURL || req.member.providerData.profileImageURL + ' width=150px>'
       };
