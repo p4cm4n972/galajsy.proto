@@ -54,9 +54,11 @@ exports.favorite = function (req, res) {
           pass: 'Jean_3:16'
         }
       });
+      var from = req.member.providerData.email || req.member.email || 'manuel.adele@gmail.com';
+      var to = req.user.email || req.user.providerData.email || 'manuel.adele@gmail.com';
       let mailOptions = {
-        from: req.member.providerData.email || req.member.email || 'manuel.adele@gmail.com',
-        to: req.user.providerData.email || req.user.email,
+        from: from,
+        to: to,
         subject: 'Be my friend | galaJSy 🤖 ',
         html: '<h1 style="border: solid green 2px; text-align:center"><i>Vous avez reçu une demande de: ' + req.member.username + '</i></h1><img src=' + req.member.profileImageURL || req.member.providerData.profileImageURL + ' width=150px>'
       };
