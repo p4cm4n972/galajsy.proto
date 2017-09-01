@@ -92,6 +92,6 @@ exports.sendMail = function (req, res) {
       return console.log(err);
     }
     console.log('Message %s sent: %s', info.messageId, info.response);
-    res.redirect('/');
+    res.redirect('/contact');
   });
 };

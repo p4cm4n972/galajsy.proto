@@ -2,8 +2,8 @@
 
 angular
   .module('core')
-  .controller('ContactController', ['$scope', '$http',
-    function ($scope, $http) {
+  .controller('ContactController', ['$scope', '$http', '$location', 
+    function ($scope, $http, $location) {
 
       $scope.sendMail = function () {
         var data = {
@@ -13,7 +13,7 @@ angular
         };
 
         $http.post('/contact', data).then(
-          console.log(data));
+          $location.url('/'));
       };
     }
   ]);
