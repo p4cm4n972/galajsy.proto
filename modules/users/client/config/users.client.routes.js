@@ -21,6 +21,15 @@
           roles: ['user', 'admin']
         }
       })
+      .state('settings.favorite', {
+        url: '/profile',
+        templateUrl: '/modules/users/client/views/settings/list-favorite.client.view.html',
+        controller: 'EditProfileController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'Settings'
+        }
+      })
       .state('settings.profile', {
         url: '/profile',
         templateUrl: '/modules/users/client/views/settings/edit-profile.client.view.html',

@@ -32,7 +32,10 @@
       type: 'dropdown',
       roles: ['user']
     });
-
+    menuService.addSubMenuItem('account', 'settings', {
+      title: 'List Favorite',
+      state: 'settings.favorite'
+    });
     menuService.addSubMenuItem('account', 'settings', {
       title: 'Edit Profile',
       state: 'settings.profile'
