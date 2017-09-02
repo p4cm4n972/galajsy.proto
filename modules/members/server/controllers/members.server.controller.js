@@ -40,7 +40,7 @@ exports.favorite = function (req, res) {
     console.log('The file has been saved!');
   });
   Member.requestFriend(req.user._id, req.member._id, function(err, done) {
-    var data = req;
+    console.log('done: ' + JSON.stringify(done));
     if (err) {
       console.log('error add friend');
     } else {
