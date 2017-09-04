@@ -141,8 +141,11 @@ GLYPHICON SETTING
 .glyphicon {
 	font-size: 1em;
 	text-shadow: 2px 2px black;
+	pad
 }
-
+nav >li> a  {
+	padding-right:180px
+}
 
 /*
 MAIN MENU 
