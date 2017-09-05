@@ -62,6 +62,7 @@ GLOBAL SETTING
 @font-face {
 	font-family: "pacFont";
 	src: url("font/PAC-FONT.woff") format('woff');
+	src: url("font/PAC-FONT.TTF")
 	}
 
 @font-face {
