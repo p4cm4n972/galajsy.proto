@@ -66,6 +66,7 @@ exports.list = function (req, res) {
       });
     }
 
+    console.log(users);
     res.json(users);
   });
 };

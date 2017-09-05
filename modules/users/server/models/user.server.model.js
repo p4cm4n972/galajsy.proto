@@ -85,6 +85,10 @@ var UserSchema = new Schema({
   presentation: {
     type: String
   },
+  myFriends: {
+    type: String,
+    default: 'no friends avaible'
+  },
   displayName: {
     type: String,
     trim: true

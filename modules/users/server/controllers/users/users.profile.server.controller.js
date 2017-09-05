@@ -138,10 +138,11 @@ exports.changeProfilePicture = function (req, res) {
   }
 };
 /**
- * List of Members
+ * List of friends
  */
 exports.list = function (req, res) {
-  Member.find().sort('-created').populate('user', 'displayName').exec(function (err, members) {
+  console.log('user');
+  User.find().sort('myFriends').populate('user', 'displayName').exec(function (err, members) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)

@@ -15,30 +15,20 @@ var path = require('path'),
 /**
  * Show the current Member
  */
-/*exports.read = function (req, res) {
+exports.read = function (req, res) {
   // convert mongoose document to JSON
   var member = req.member ? req.member.toJSON() : {};
   // Add a custom field to the Article, for determining if the current User is the "owner".
   // NOTE: This field is NOT persisted to the database, since it doesn't exist in the Article model.
   member.isCurrentUserOwner = req.user && member.user && member.user._id.toString() === req.user._id.toString();
 
-  console.log(member);
   res.jsonp(member);
-};*/
-
+};
+/**
+ * Add favorite friends + Email notification
+ */
 exports.favorite = function (req, res) {
-  fs.writeFile('addFriend.txt', util.inspect(req), (err) => {
-    if (err) throw err;
-    console.log('The file has been saved!');
-  });
-  fs.writeFile('addFriendUser.txt', util.inspect(req.user), (err) => {
-    if (err) throw err;
-    console.log('The file has been saved!');
-  });
-  fs.writeFile('addFriendMember.txt', util.inspect(req.member), (err) => {
-    if (err) throw err;
-    console.log('The file has been saved!');
-  });
+ 
   Member.requestFriend(req.user._id, req.member._id, function(err, done) {
     console.log('done: ' + JSON.stringify(done));
     if (err) {
@@ -54,13 +44,13 @@ exports.favorite = function (req, res) {
           pass: 'Jean_3:16'
         }
       });
-      var from = req.member.providerData.email || req.member.email || 'manuel.adele@gmail.com';
-      var to = req.user.email || req.user.providerData.email || 'manuel.adele@gmail.com';
+      var to = (req.member.providerData.email) || (req.member.email);
+      var from = (req.user.email) || (req.user.providerData.email);
       let mailOptions = {
         from: from,
         to: to,
         subject: 'Be my friend | galaJSy 🤖 ',
-        html: '<h1 style="border: solid green 2px; text-align:center"><i>Vous avez reçu une demande de: ' + req.member.username + '</i></h1><img src=' + req.member.profileImageURL || req.member.providerData.profileImageURL + ' width=150px>'
+        html: '<h1 style="border: solid green 2px; text-align:center"><i>Vous avez reçu une demande de: ' + (req.user.username) + '</i></h1><img src=' + req.member.profileImageURL || req.member.providerData.profileImageURL + ' width=150px>'
       };
       transporter.sendMail(mailOptions, function (err, info) {
         if (err) {
@@ -82,6 +72,7 @@ exports.list = function (req, res) {
         message: errorHandler.getErrorMessage(err)
       });
     } else {
+      console.log(members);
       res.jsonp(members);
     }
   });
