@@ -137,7 +137,20 @@ exports.changeProfilePicture = function (req, res) {
     });
   }
 };
-
+/**
+ * List of Members
+ */
+exports.list = function (req, res) {
+  Member.find().sort('-created').populate('user', 'displayName').exec(function (err, members) {
+    if (err) {
+      return res.status(400).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      res.jsonp(members);
+    }
+  });
+};
 /**
  * Send User
  */

@@ -33,26 +33,26 @@
       roles: ['user']
     });
     menuService.addSubMenuItem('account', 'settings', {
-      title: 'List Favorite',
-      state: 'settings.favorite'
+      title: '💛',
+      state: 'friends'
     });
     menuService.addSubMenuItem('account', 'settings', {
-      title: 'Edit Profile',
+      title: '👤',
       state: 'settings.profile'
     });
 
     menuService.addSubMenuItem('account', 'settings', {
-      title: 'Edit Profile Picture',
+      title: '🖼️',
       state: 'settings.picture'
     });
 
     menuService.addSubMenuItem('account', 'settings', {
-      title: 'Change Password',
+      title: '🔑',
       state: 'settings.password'
     });
 
     menuService.addSubMenuItem('account', 'settings', {
-      title: 'Manage Social Accounts',
+      title: '⚙️',
       state: 'settings.accounts'
     });
   }

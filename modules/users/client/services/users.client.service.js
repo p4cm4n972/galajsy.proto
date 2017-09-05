@@ -75,15 +75,16 @@
     .module('users.admin.services')
     .factory('AdminService', AdminService);
 
-  AdminService.$inject = ['$resource'];
+  AdminService.$inject = ['$resource', '$log'];
 
-  function AdminService($resource) {
-    return $resource('/api/users/:userId', {
+  function AdminService($resource, $log) {
+    var User = $resource('/api/users/:userId', {
       userId: '@_id'
     }, {
       update: {
         method: 'PUT'
       }
     });
+    return User;
   }
 }());

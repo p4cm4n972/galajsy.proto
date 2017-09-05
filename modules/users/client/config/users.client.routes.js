@@ -11,6 +11,12 @@
   function routeConfig($stateProvider) {
     // Users state routing
     $stateProvider
+      .state('friends', {
+        url: '/friends',
+        templateUrl: 'modules/users/client/views/friends.client.view.html',
+        controller: 'FriendsController',
+        controllerAs: 'vm'
+      })
       .state('settings', {
         abstract: true,
         url: '/settings',
@@ -21,15 +27,7 @@
           roles: ['user', 'admin']
         }
       })
-      .state('settings.favorite', {
-        url: '/profile',
-        templateUrl: '/modules/users/client/views/settings/list-favorite.client.view.html',
-        controller: 'EditProfileController',
-        controllerAs: 'vm',
-        data: {
-          pageTitle: 'Settings'
-        }
-      })
+     
       .state('settings.profile', {
         url: '/profile',
         templateUrl: '/modules/users/client/views/settings/edit-profile.client.view.html',
