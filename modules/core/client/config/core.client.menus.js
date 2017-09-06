@@ -32,19 +32,20 @@
       type: 'dropdown',
       roles: ['user']
     });
+
     menuService.addSubMenuItem('account', 'settings', {
       title: '💛',
       state: 'friends'
-    }); 
+    });
     menuService.addSubMenuItem('account', 'settings', {
       title: '📧',
       state: 'message'
-    });   
+    });
     menuService.addSubMenuItem('account', 'settings', {
       title: '👤',
       state: 'settings.profile'
     });
-    
+
 
     menuService.addSubMenuItem('account', 'settings', {
       title: '🖼️',

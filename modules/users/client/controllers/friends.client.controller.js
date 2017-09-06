@@ -9,13 +9,14 @@
 
   function FriendsController($scope, $filter, AdminService, $http) {
     var vm = this;
-    $scope.title="My Friends";
+    $scope.title = "My Friends";
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
 
-    vm.friends = AdminService.query(function (data) {
+   /* vm.friends = AdminService.query(function (data) {
+      console.log(data);
       vm.buildPager();
-    });
+    });*/
 
     function buildPager() {
       vm.pagedItems = [];

@@ -17,6 +17,13 @@
         controller: 'MessageController',
         controllerAs: 'vm'
       })
+      .state('message.inbox', {
+        url: '/inbox',
+        templateUrl: 'modules/users/client/views/message-inbox.client.view.html',
+        controller: 'MessageController',
+        controllerAs: 'vm'
+      })
+      
       .state('friends', {
         url: '/friends',
         templateUrl: 'modules/users/client/views/friends.client.view.html',
