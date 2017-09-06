@@ -9,6 +9,7 @@
         <div class="col-sm-12">
           <h1> GalaJSy</h1>
           <h2><span ng-hide="vm.authentication.user"> social network</span></h2>
+          <h3>{{connected}}</h3>
           <span ng-hide="authentication.user" ng-class="{active: $ctrl.isActive('/login')}"><a  role="button" ui-sref="authentication.signin" class="btn btn-success direct"><span class="glyphicon glyphicon-user"></span></a></span>
           <span ng-hide="authentication.user" ng-class="{active: $ctrl.isActive('/signup')}"><a role="button" ui-sref="authentication.signup" class="btn btn-primary direct"><span class="glyphicon glyphicon-pencil"></span></a></span>
         </div>

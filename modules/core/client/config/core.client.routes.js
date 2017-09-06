@@ -36,7 +36,7 @@
       .state('about', {
         url: '/about',
         templateUrl: '/modules/core/client/views/about.client.view.html',
-        controller: 'AboutController',
+        controller: 'HomeController',
         controllerAs: 'vm'
       })
       .state('contact', {

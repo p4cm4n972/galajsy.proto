@@ -1,6 +1,8 @@
 'use strict';
 
-var nodemailer = require('nodemailer');
+var nodemailer = require('nodemailer'),
+fs = require('fs'),
+util = require('util');
 
 
 var validator = require('validator'),
@@ -12,6 +14,7 @@ var validator = require('validator'),
  */
 exports.renderIndex = function (req, res) {
   var safeUserObject = null;
+  console.log('USER CONNECTED');
   if (req.user) {
     safeUserObject = {
       displayName: validator.escape(req.user.displayName),
@@ -25,8 +28,7 @@ exports.renderIndex = function (req, res) {
       firstName: validator.escape(req.user.firstName),
       additionalProvidersData: req.user.additionalProvidersData
     };
-  }
-
+  } 
   res.render('modules/core/server/views/index', {
     user: JSON.stringify(safeUserObject),
     sharedConfig: JSON.stringify(config.shared)
@@ -42,6 +44,8 @@ exports.renderServerError = function (req, res) {
   });
 };
 
+exports.connected = function (req, res) {
+};
 /**
  * Render the server not found responses
  * Performs content-negotiation on the Accept HTTP header

@@ -12,7 +12,7 @@
     menuService.addMenuItem('topbar', {
       title: 'Chat',
       state: 'chat',
-      class: 'edit'
+      class: 'comment'
     });
   }
 }());

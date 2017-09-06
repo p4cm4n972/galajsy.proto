@@ -36,9 +36,7 @@
           <span ng-bind="vm.authentication.user.username"></span> <b class="caret"></b>
         </a>
         <ul class="dropdown-menu" role="menu">
-          <li>
-            <a href="/friends">💛</a>
-          </li>
+          
           <li class="divider"></li>
           <li ui-sref-active="active" ng-repeat="item in vm.accountMenu.items">
             <a ui-sref="{{item.state}}" ng-bind="item.title"></a>

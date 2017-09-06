@@ -11,6 +11,12 @@
   function routeConfig($stateProvider) {
     // Users state routing
     $stateProvider
+      .state('message', {
+        url: '/message',
+        templateUrl: 'modules/users/client/views/message.client.view.html',
+        controller: 'MessageController',
+        controllerAs: 'vm'
+      })
       .state('friends', {
         url: '/friends',
         templateUrl: 'modules/users/client/views/friends.client.view.html',
