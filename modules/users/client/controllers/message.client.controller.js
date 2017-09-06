@@ -13,9 +13,5 @@
     // Message controller logic
     // ...
 
-    init();
-
-    function init() {
-    }
   }
 })();
