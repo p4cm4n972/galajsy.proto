@@ -114,9 +114,7 @@ form label {
 }
 .footer {
 	background-color: #000000;
-	bottom: 0;
-	height: 60px;
-	position: fixed;
+	height: 50px;
 	text-align: center;
 	width: 100%;
 }
