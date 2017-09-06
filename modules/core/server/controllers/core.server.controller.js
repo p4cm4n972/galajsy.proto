@@ -14,7 +14,6 @@ var validator = require('validator'),
  */
 exports.renderIndex = function (req, res) {
   var safeUserObject = null;
-  console.log('USER CONNECTED');
   if (req.user) {
     safeUserObject = {
       displayName: validator.escape(req.user.displayName),
@@ -42,9 +41,6 @@ exports.renderServerError = function (req, res) {
   res.status(500).render('modules/core/server/views/500', {
     error: 'Oops! Something went wrong...'
   });
-};
-
-exports.connected = function (req, res) {
 };
 /**
  * Render the server not found responses

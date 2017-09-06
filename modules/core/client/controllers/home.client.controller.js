@@ -6,7 +6,7 @@
     .controller('HomeController', HomeController);
 
    
-  HomeController.$inject = ['$window', '$rootScope', '$scope', 'Authentication'];
+  HomeController.$inject = ['$scope', 'Authentication'];
   function HomeController($scope, Authentication) {
     var vm = this;
     

@@ -24,7 +24,6 @@
     function connect() {
       // Connect only when authenticated
       if (Authentication.user) {
-        console.log('MEMBER CONNECTED');
         service.socket = io();
       }
     }
