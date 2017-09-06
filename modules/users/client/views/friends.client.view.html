@@ -1,0 +1,31 @@
+<section>
+    <div class="page-header text-center">
+      <div class="row">
+        <div class="col-md-4">
+      <h1>{{title}}</h1><span ng-bind="vm.friends.length">mem</span>
+    </div>
+    <div class="col-md-4" style="margin-top: 2em">
+        <input class="form-control col-md-4" type="text" ng-model="vm.search" placeholder="Search" ng-change="vm.figureOutItemsToDisplay()" />
+      </div>
+    </div>
+  </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <uib-pagination boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage"
+            ng-change="vm.pageChanged()"></uib-pagination>
+        </div>
+      </div>
+      <div class="list-group">
+          <li ng-repeat="member in vm.pagedItems"  class="col-sm-1 col-xs-3 contain line" style="width: 150px; height: 100px; list-style: none">
+              <div class="thumbnail"  style="box-shadow: 5px 2px 10px grey " ><img ng-src="/{{member.profileImageURL}}" style="width:100%; height:100px"><h3 class="text" ng-bind="member.username"></h3><h4 class="text" ng-bind="member.roles"></h4></div>
+              
+          </li>
+        </div>
+      </div>
+    <div class="alert alert-warning text-center" ng-if="vm.members.$resolved && !vm.members.length">
+      No Members yet, why don't you <a ui-sref="members.create">create one</a>?
+    </div>
+  
+    </div>
+  </section>
